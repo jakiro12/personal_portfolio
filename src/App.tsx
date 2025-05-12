@@ -77,7 +77,7 @@ function App() {
             <button className='btn_get-wsapp'
               onClick={(e)=>openMediaLinks(e,'https://api.whatsapp.com/send?phone=+5493424420130')}
             >
-              <img src='../public/wsp.png' style={{width:20,height:20,objectFit:'cover'}}/>
+              <img src='/wsp.png' style={{width:20,height:20,objectFit:'cover'}}/>
               Chat</button>
           </div>
         </aside>

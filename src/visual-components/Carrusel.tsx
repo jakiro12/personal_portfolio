@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react'
 import '../app.css'
 import { openMediaLinks } from '../custom-funcs/open_links'
 export default function CarruselOfCurrentProjects(){
-    const [project,setProject]=useState<number>(1)
-    const projectsNames=["Listador de tareas para tableros personales de Trello","Invitacion animada para eventos","Teoria de los colores","SiDCa Aplicacion movil"]
+    const [project,setProject]=useState<number>(0)
+    const projectsNames=["Listador de tareas para tableros personales de Trello",
+                          "Invitacion animada para eventos",
+                          "BBVA MVP clon",
+                          "SiDCa Aplicacion movil"]
     useEffect(() => {
         const buttons = document.querySelectorAll<HTMLButtonElement>("[data-carousel-button]")        
         buttons.forEach(button => {
