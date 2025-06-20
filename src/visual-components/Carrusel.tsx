@@ -5,8 +5,10 @@ export default function CarruselOfCurrentProjects(){
     const [project,setProject]=useState<number>(0)
     const projectsNames=["Listador de tareas para tableros personales de Trello",
                           "Invitacion animada para eventos",
-                          "BBVA MVP clon",
-                          "SiDCa Aplicacion movil"]
+                          "BBVA MVP",
+                          "SiDCa Aplicacion movil",
+                          "Bancoppel MVP"                        
+                        ]
     useEffect(() => {
         const buttons = document.querySelectorAll<HTMLButtonElement>("[data-carousel-button]")        
         buttons.forEach(button => {
@@ -85,6 +87,16 @@ export default function CarruselOfCurrentProjects(){
                         <source media='(min-width:650px)' srcSet='/sidcapk.png'/>
                         <source media='(max-width:600px)' srcSet='/sidcap.jpg'/>
                         <img src="/sidcapk.png" alt="Aplicacion movil de Sidca"/>
+                      </picture>  
+                  </li>
+                      <li className="slide"
+                    >                    
+                     <picture
+                         onClick={(e)=>openMediaLinks(e,"https://www.google.com")}
+                      >
+                        <source media='(min-width:650px)' srcSet='/bancoppelw.png'/>
+                        <source media='(max-width:600px)' srcSet='/bancoppel.jpg'/>
+                        <img src="/bancoppelw.png" alt="Aplicacion movil de Bancoppel"/>
                       </picture>  
                   </li>
                 </ul>
