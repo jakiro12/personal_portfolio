@@ -6,6 +6,7 @@ import AboutMe from './visual-components/About'
 
 function App() {
   const [openAbout,setOpenAbout]=useState<boolean>(false)
+  const [optionsMobile,setOptionsMobile]=useState<boolean>(false)
   const deploys=useRef<null>(null)
 
   const clients : number[]=[1,2,3]
@@ -50,6 +51,20 @@ function App() {
               onClick={()=>setOpenAbout(!openAbout)}
             >About</span>
             <span>Resume</span>
+          </div>
+          <div className='items_funcs_mobile'>
+            <button
+              onClick={()=>setOptionsMobile(!optionsMobile)}
+            >{optionsMobile ? <span>&#10006;</span> : <span>&#9776;</span>}</button>
+            <div className='mobile_options' style={{visibility:optionsMobile ? 'visible' : 'hidden'}}>
+                <span
+                onClick={()=>scrollWebsite(deploys)}
+              >Works</span>
+              <span
+                onClick={()=>setOpenAbout(!openAbout)}
+              >About</span>
+              <span>Resume</span>
+            </div>
           </div>
         </nav>
         <aside className='box_about_info'>
