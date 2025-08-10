@@ -92,7 +92,7 @@ export default function CarruselOfCurrentProjects(){
                       <li className="slide"
                     >                    
                      <picture
-                         onClick={(e)=>openMediaLinks(e,"https://www.google.com")}
+                         onClick={(e)=>openMediaLinks(e,"https://github.com/jakiro12/BancoppelClonApp")}
                       >
                         <source media='(min-width:650px)' srcSet='/bancoppelw.png'/>
                         <source media='(max-width:600px)' srcSet='/bancoppel.jpg'/>
